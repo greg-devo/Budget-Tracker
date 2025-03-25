@@ -1,0 +1,38 @@
+<h1 class="heading">Transaction History</h1>
+{{#if hasTransaction}}
+  <table class="table table-striped mt-4">
+    <thead class="table-dark">
+    <tr>
+      <td>Type</td>
+      <td>Amount</td>
+      <td>Category</td>
+      <td>Date</td>
+      <td>Description</td>
+      <td>Actions</td>
+    </tr>
+    </thead>
+    <tbody>
+    {{#each transactions}}
+
+      <tr>
+        <td>{{this.type}}</td>
+        <td>{{this.amount}}</td>
+        <td>{{this.category}}</td>
+        <td>{{this.date}}</td>
+        <td>{{this.description}}</td>
+        <td>
+          <form class="d-grid" method="get" action="edit/{{this.id}}">
+            <button type="submit" class="btn btn-warning">Edit</button>
+          </form>
+          <form class="d-grid mt-1" method="get" action="delete/{{this.id}}">
+            <button type="submit" class="btn btn-danger">Delete</button>
+          </form>
+        </td>
+      </tr>
+
+    {{/each}}
+    </tbody>
+  </table>
+  {{else}}
+  <p id="noHistory">No transactions have been made.</p>
+{{/if}}

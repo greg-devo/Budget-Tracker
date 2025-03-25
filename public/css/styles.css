@@ -1,0 +1,65 @@
+body {
+    background-color: #ffffff;
+}
+nav {
+    height: 10vh;
+    min-height: 66px;
+    display: flex;
+    align-items: center;
+}
+#logo {
+    height: 34px;
+    border-radius: 4px;
+    margin-left: 6vw;
+}
+#title {
+    font-size: 24px;
+
+}
+#selections {
+    margin-right: 6vw;
+}
+#content {
+    min-height: 84vh;
+}
+.heading {
+    margin-top: 8vh;
+    text-align: center;
+}
+#noHistory {
+    margin-top: 4vh;
+    text-align: center;
+    color: red;
+}
+#footer {
+    text-align: right;
+}
+#summary {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    gap: 2vw;
+}
+#income, #expenses, #balance {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 18vh;
+    border-radius: 6px;
+    color: white;
+}
+#income {
+    background-color: #2a9f36;
+}
+#expenses {
+    background-color: #c53434;
+}
+#balance {
+    background-color: #2d89b6;
+}
+#number {
+    font-size: 4em;
+    font-weight: lighter;
+}
